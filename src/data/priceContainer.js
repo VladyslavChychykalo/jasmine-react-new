@@ -8,19 +8,39 @@ export const wemanRoom = [
       {
         id: uuidv4(),
         subCategorie: "Услуги по покраске волос",
-        services: [
-          {
-            name: "мелірування волосся",
-            price: "",
-          },
-        ],
+        services: {
+          attributes: [
+            {
+              name: "мелірування волосся",
+              price: "",
+            },
+          ],
+        },
       },
       {
         id: uuidv4(),
         subCategorie: "Лечение и уход за волоссами",
-        services: [],
+        services: {
+          attributes: [
+            {
+              name: "мелірування волосся",
+              price: "",
+            },
+          ],
+        },
       },
-      { id: uuidv4(), subCategorie: "Стрижка и укладка волос", services: [] },
+      {
+        id: uuidv4(),
+        subCategorie: "Стрижка и укладка волос",
+        services: {
+          attributes: [
+            {
+              name: "мелірування волосся",
+              price: "",
+            },
+          ],
+        },
+      },
     ],
   },
   {
@@ -30,12 +50,26 @@ export const wemanRoom = [
       {
         id: uuidv4(),
         subCategorie: "Маникюр",
-        services: [],
+        services: {
+          attributes: [
+            {
+              name: "мелірування волосся",
+              price: "",
+            },
+          ],
+        },
       },
       {
         id: uuidv4(),
         subCategorie: "Педикюр",
-        services: [],
+        services: {
+          attributes: [
+            {
+              name: "мелірування волосся",
+              price: "",
+            },
+          ],
+        },
       },
     ],
   },
@@ -46,7 +80,14 @@ export const wemanRoom = [
       {
         id: uuidv4(),
         subCategorie: "",
-        services: [],
+        services: {
+          attributes: [
+            {
+              name: "мелірування волосся",
+              price: "",
+            },
+          ],
+        },
       },
     ],
   },
@@ -57,7 +98,14 @@ export const wemanRoom = [
       {
         id: uuidv4(),
         subCategorie: "",
-        services: [],
+        services: {
+          attributes: [
+            {
+              name: "мелірування волосся",
+              price: "",
+            },
+          ],
+        },
       },
     ],
   },
@@ -68,7 +116,14 @@ export const wemanRoom = [
       {
         id: uuidv4(),
         subCategorie: "",
-        services: [],
+        services: {
+          attributes: [
+            {
+              name: "мелірування волосся",
+              price: "",
+            },
+          ],
+        },
       },
     ],
   },
@@ -189,7 +244,14 @@ export const wemanRoom = [
       {
         id: uuidv4(),
         subCategorie: "",
-        services: [],
+        services: {
+          attributes: [
+            {
+              name: "мелірування волосся",
+              price: "",
+            },
+          ],
+        },
       },
     ],
   },
@@ -200,7 +262,14 @@ export const wemanRoom = [
       {
         id: uuidv4(),
         subCategorie: "",
-        services: [],
+        services: {
+          attributes: [
+            {
+              name: "мелірування волосся",
+              price: "",
+            },
+          ],
+        },
       },
     ],
   },
@@ -211,7 +280,14 @@ export const wemanRoom = [
       {
         id: uuidv4(),
         subCategorie: "",
-        services: [],
+        services: {
+          attributes: [
+            {
+              name: "мелірування волосся",
+              price: "",
+            },
+          ],
+        },
       },
     ],
   },
@@ -222,7 +298,14 @@ export const wemanRoom = [
       {
         id: uuidv4(),
         subCategorie: "",
-        services: [],
+        services: {
+          attributes: [
+            {
+              name: "мелірування волосся",
+              price: "",
+            },
+          ],
+        },
       },
     ],
   },
@@ -241,12 +324,26 @@ export const manRoom = [
       {
         id: uuidv4(),
         subCategorie: "Маникюр",
-        services: [],
+        services: {
+          attributes: [
+            {
+              name: "мелірування волосся",
+              price: "",
+            },
+          ],
+        },
       },
       {
         id: uuidv4(),
         subCategorie: "Педикюр",
-        services: [],
+        services: {
+          attributes: [
+            {
+              name: "мелірування волосся",
+              price: "",
+            },
+          ],
+        },
       },
     ],
   },
@@ -257,7 +354,14 @@ export const manRoom = [
       {
         id: uuidv4(),
         subCategorie: "",
-        services: [],
+        services: {
+          attributes: [
+            {
+              name: "мелірування волосся",
+              price: "",
+            },
+          ],
+        },
       },
     ],
   },
@@ -267,6 +371,19 @@ export const childRoom = [
   {
     id: uuidv4(),
     selectName: "Парикмахерский зал",
-    subCategories: [{ id: uuidv4(), subCategorie: "Стрижка", services: [] }],
+    subCategories: [
+      {
+        id: uuidv4(),
+        subCategorie: "Стрижка",
+        services: {
+          attributes: [
+            {
+              name: "мелірування волосся",
+              price: "",
+            },
+          ],
+        },
+      },
+    ],
   },
 ];

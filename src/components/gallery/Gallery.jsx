@@ -2,6 +2,8 @@ import SwiperCore, { Pagination, Lazy } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import galleryImages from "../../data/galleryImages";
 import { GlobalStyle, StyledContainer } from "./StyledGallery";
+import Heading from "../typography/heading";
+import Text from "../typography/text";
 
 SwiperCore.use([Pagination, Lazy]);
 
@@ -16,8 +18,12 @@ const Gallery = () => {
   };
 
   return (
-    <div className="rootJopa" style={{ position: "relative" }}>
-      {/* <GlobalStyle /> */}
+    <div style={{ position: "relative" }}>
+      <Heading transform="uppercase">Наши работы</Heading>
+      <div>
+        <Text>Больше работ смотрите в нашем INSTAGRAM</Text>
+        icon
+      </div>
       <Swiper {...carouselSettings}>
         {galleryImages.map(({ src, alt, id }) => {
           return (

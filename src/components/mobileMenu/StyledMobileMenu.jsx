@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 // import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+  body {
+    overflow: hidden;
+  }
+`;
 
 export const StyledContainer = styled.div`
   background-color: #d6b095;
@@ -20,6 +26,11 @@ const Test = styled.div`
   top: 0;
   bottom: 0;
   z-index: 99;
+`;
+
+export const StyledNav = styled.div`
+  display: "flex";
+  flex-direction: "column";
 `;
 
 export const TestStyled = () => {

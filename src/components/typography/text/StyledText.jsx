@@ -6,14 +6,14 @@ const textSizes = {
   s: "12px",
   m: "14px",
   l: "18px",
-  xl: "48px",
+  xl: "24px",
+  xxl: "48px",
 };
 
 const textWeights = {
   normal: 400,
   light: 300,
-  semibold: 500,
-  bold: 600,
+  bold: 700,
 };
 
 const Text = (props) => {
@@ -23,10 +23,12 @@ const Text = (props) => {
 };
 
 const StyledText = styled(Text)`
+  font-family: "Lato", sans-serif;
   font-size: ${({ size }) => textSizes[size]};
   font-weight: ${({ weight }) => textWeights[weight]};
   text-transform: ${({ transform }) => transform};
   text-align: ${({ align }) => align};
+  color: ${({ color }) => color};
 `;
 
 StyledText.propTypes = {
@@ -36,6 +38,8 @@ StyledText.propTypes = {
   align: PropTypes.oneOf(["start", "center", "end"]),
   transform: PropTypes.oneOf(["uppercase", "lowercase", "capitalize", "none"]),
   children: PropTypes.node,
+  letterSpacing: PropTypes.string || PropTypes.number,
+  color: PropTypes.string,
 };
 
 StyledText.defaultProps = {
@@ -45,6 +49,8 @@ StyledText.defaultProps = {
   weight: "normal",
   align: "start",
   transform: "none",
+  letterSpacing: 0,
+  color: "",
 };
 
 export default StyledText;

@@ -10,8 +10,6 @@ SwiperCore.use([Pagination, Lazy]);
 const Team = () => {
   const [currentOption, setCurrentOption] = useState(galleryTeam[0]);
 
-  console.log(currentOption);
-
   const carouselSettings = {
     spaceBetween: 20,
     slidesPerView: 1,
@@ -20,8 +18,6 @@ const Team = () => {
       clickable: true,
     },
   };
-
-  console.log(currentOption);
 
   return (
     <div style={{ position: "relative" }}>

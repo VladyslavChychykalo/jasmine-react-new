@@ -9,24 +9,41 @@ SwiperCore.use([Pagination, Lazy]);
 const Services = () => {
   const [currentTab, setCurrentTab] = useState(wemanRoom);
   const [currentSrvice, setCurrentService] = useState(null);
-  const [currentPrice, setCurrentPrice] = useState(null)
+  const [currentPrice, setCurrentPrice] = useState(null);
 
   useEffect(() => {
     setCurrentService(currentTab[0]);
   }, [currentTab]);
 
-  console.log(currentSrvice);
+  useEffect(() => {
+    setCurrentPrice(currentSrvice?.subCategories[0]);
+  }, [currentSrvice]);
+
+  console.log(currentPrice);
 
   const carouselSettings = {
     spaceBetween: 20,
     slidesPerView: 1.5,
+  };
+
+  const carouselSettingsPrice = {
+    spaceBetween: 20,
+    slidesPerView: 1,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
   };
 
-//   const currentAttrs = currentSrvice && currentSrvice.
+  const elL = Math.ceil(currentPrice?.services.attributes.length / 7);
+  const newEl = [];
+
+  for (let i = 0; i < elL; i++) {
+    const el = currentPrice?.services.attributes.slice(i * 7, i * 7 + 7);
+    newEl.push(el);
+  }
+
+  console.log(newEl);
 
   return (
     <div>
@@ -59,16 +76,48 @@ const Services = () => {
       />
       {currentSrvice?.subCategories && (
         <Swiper {...carouselSettings} freeMode>
-          {currentSrvice.subCategories.map(({ id, subCategorie }) => {
+          {currentSrvice.subCategories.map((item) => {
+            const { id, subCategorie } = item;
+
             return (
               <SwiperSlide key={id}>
-                <p>{subCategorie}</p>
+                <p
+                  onClick={() => {
+                    setCurrentPrice(item);
+                  }}
+                >
+                  {subCategorie}
+                </p>
               </SwiperSlide>
             );
           })}
         </Swiper>
       )}
-      {}
+      {newEl.length && (
+        <Swiper {...carouselSettingsPrice}>
+          {newEl.map((item, index) => {
+            return (
+              <SwiperSlide key={index}>
+                {item.map(({ name, price, id }) => {
+                  return (
+                    <div key={id}>
+                      <p>{name}</p>
+                      <p>{price}</p>
+                    </div>
+                  );
+                })}
+              </SwiperSlide>
+            );
+          })}
+          <div
+            style={{
+              visibility:
+                !newEl.length || newEl.length === 1 ? "hidden" : "visible",
+            }}
+            className="swiper-pagination"
+          />
+        </Swiper>
+      )}
     </div>
   );
 };
