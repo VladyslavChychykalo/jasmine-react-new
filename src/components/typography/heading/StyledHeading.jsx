@@ -30,6 +30,8 @@ const StyledHeading = styled(Text)`
   text-align: ${({ align }) => align};
   letter-spacing: ${({ letterSpacing }) => letterSpacing + "px"};
   color: ${({ color }) => color};
+  margin: ${({ margin }) => margin};
+  word-break: break-word;
 `;
 
 StyledHeading.propTypes = {
@@ -41,6 +43,7 @@ StyledHeading.propTypes = {
   children: PropTypes.node,
   letterSpacing: PropTypes.string || PropTypes.number,
   color: PropTypes.string,
+  margin: PropTypes.string,
 };
 
 StyledHeading.defaultProps = {
@@ -52,6 +55,7 @@ StyledHeading.defaultProps = {
   transform: "none",
   letterSpacing: 0,
   color: "",
+  margin: "0",
 };
 
 export default StyledHeading;

@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const textSizes = {
+  ss: "10px",
   s: "12px",
   m: "14px",
   l: "18px",
@@ -29,6 +30,10 @@ const StyledText = styled(Text)`
   text-transform: ${({ transform }) => transform};
   text-align: ${({ align }) => align};
   color: ${({ color }) => color};
+  letter-spacing: ${({ letterSpacing }) => letterSpacing + "px"};
+  margin: ${({ margin }) => margin};
+  line-height: ${({ lineHeight }) => lineHeight + "px"};
+  word-break: break-word;
 `;
 
 StyledText.propTypes = {
@@ -40,6 +45,7 @@ StyledText.propTypes = {
   children: PropTypes.node,
   letterSpacing: PropTypes.string || PropTypes.number,
   color: PropTypes.string,
+  margin: PropTypes.string,
 };
 
 StyledText.defaultProps = {
@@ -51,6 +57,8 @@ StyledText.defaultProps = {
   transform: "none",
   letterSpacing: 0,
   color: "",
+  margin: "0",
+  lineHeight: "inherit",
 };
 
 export default StyledText;

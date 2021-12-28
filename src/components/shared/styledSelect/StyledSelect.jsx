@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { ArrowIcon } from "../../../icons";
+import Text from "../../typography/text";
 
 const CustomSelect = styled.div`
   height: 50px;
@@ -19,6 +20,8 @@ const CustomOptionsContainer = styled.ul`
   z-index: 2;
   border: 1px solid #1b4332;
   border-top: 0px;
+  left: 0;
+  right: 0;
 `;
 
 const CustomOptions = styled.li`
@@ -29,6 +32,7 @@ const CustomOptions = styled.li`
   display: flex;
   align-items: center;
   cursor: pointer;
+  color: #1b4332;
 
   &:hover {
     background-color: #efe8e1;
@@ -38,7 +42,12 @@ const CustomOptions = styled.li`
   }
 `;
 
-const StyledSelect = ({ currentOption, options, setCurrentOption }) => {
+const StyledSelect = ({
+  currentOption,
+  options,
+  setCurrentOption,
+  marginBottom,
+}) => {
   const [isSelected, setSelect] = useState(false);
 
   const selectRef = useRef(null);
@@ -67,9 +76,11 @@ const StyledSelect = ({ currentOption, options, setCurrentOption }) => {
   };
 
   return (
-    <div>
+    <div style={{ marginBottom: marginBottom + "px", position: "relative" }}>
       <CustomSelect ref={selectRef} onClick={() => setSelect((prev) => !prev)}>
-        {currentOption?.selectName}
+        <Text size="m" color="#1B4332" letterSpacing="1">
+          {currentOption?.selectName}
+        </Text>
         <ArrowIcon isSelected={isSelected} />
       </CustomSelect>
       {isSelected && (
@@ -80,7 +91,9 @@ const StyledSelect = ({ currentOption, options, setCurrentOption }) => {
               key={option.id}
               onClick={() => handleChangeOption(option)}
             >
-              {option.selectName}
+              <Text size="m" color="#1B4332" letterSpacing="1">
+                {option.selectName}
+              </Text>
             </CustomOptions>
           ))}
         </CustomOptionsContainer>

@@ -4,6 +4,7 @@ import galleryImages from "../../data/galleryImages";
 import { GlobalStyle, StyledContainer } from "./StyledGallery";
 import Heading from "../typography/heading";
 import Text from "../typography/text";
+import { InstagramIcon } from "../../icons";
 
 SwiperCore.use([Pagination, Lazy]);
 
@@ -18,11 +19,36 @@ const Gallery = () => {
   };
 
   return (
-    <div style={{ position: "relative" }}>
-      <Heading transform="uppercase">Наши работы</Heading>
-      <div>
-        <Text>Больше работ смотрите в нашем INSTAGRAM</Text>
-        icon
+    <div
+      style={{
+        position: "relative",
+        backgroundColor: "#EFE8E1",
+        marginTop: "72px",
+        padding: "52px 25px",
+      }}
+    >
+      <Heading
+        letterSpacing="5"
+        size="l"
+        weight="bold"
+        color="#1B4332"
+        transform="uppercase"
+      >
+        Наши работы
+      </Heading>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          marginTop: "15px",
+          marginBottom: "18px",
+        }}
+      >
+        <Text color="#1B4332" letterSpacing="3" lineHeight="20">
+          Больше работ смотрите в нашем INSTAGRAM
+        </Text>
+        <InstagramIcon />
       </div>
       <Swiper {...carouselSettings}>
         {galleryImages.map(({ src, alt, id }) => {

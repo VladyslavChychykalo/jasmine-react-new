@@ -26,7 +26,7 @@ const MobileMenu = () => {
             height: "25px",
           }}
         >
-          <Heading as="h4" letterSpacing="3" color="#fff">
+          <Heading size="l" as="h4" letterSpacing="3" color="#fff">
             Жасмин
           </Heading>
           <IconMenu
@@ -37,14 +37,27 @@ const MobileMenu = () => {
           />
         </div>
         {!isMenu ? (
-          <div>
-            <Text textWeights="light" size="xl" color="#fff">
+          <div style={{ marginTop: "110px" }}>
+            <Text letterSpacing="4" textWeights="light" size="xl" color="#fff">
               Красота в стиле
             </Text>
-            <Heading textWeights="bold" size="xxl" color="#fff">
+            <Heading
+              letterSpacing="17"
+              textWeights="bold"
+              size="xxl"
+              color="#fff"
+              transform="uppercase"
+              margin="18px 0 0 0"
+            >
               Жасмин
             </Heading>
-            <Text textWeights="normal" color="#fff">
+            <Text
+              letterSpacing="2.9"
+              lineHeight="19"
+              margin="32px 0 0 0"
+              textWeights="normal"
+              color="#fff"
+            >
               Все види косметологических услуг, маникюр и педикюр, окрашивание
               волос, парикмахерские услуги.
             </Text>
@@ -69,15 +82,36 @@ const MobileMenu = () => {
                 display: "flex",
                 flexDirection: "column",
                 width: "fit-content",
+                alignItems: "center",
+                marginTop: "72px",
+                gap: "38px",
+                letterSpacing: "4px",
               }}
             >
-              <a>Главная</a>
-              <a>Галерея</a>
-              <a>Прайс</a>
-              <a>Сертификаты</a>
-              <a>Контакты</a>
+              <a style={{ color: "#fff", fontSize: "18px" }}>Главная</a>
+              <a style={{ color: "#fff", fontSize: "18px" }}>Галерея</a>
+              <a style={{ color: "#fff", fontSize: "18px" }}>Прайс</a>
+              <a style={{ color: "#fff", fontSize: "18px" }}>Сертификаты</a>
+              <a style={{ color: "#fff", fontSize: "18px" }}>Контакты</a>
             </nav>
-            <div style={{ marginRight: "auto" }}>UA</div>
+            <div
+              style={{
+                marginRight: "auto",
+                marginTop: "92px",
+                marginLeft: "24px",
+                color: "#fff",
+                border: "1px solid #fff",
+                width: "48px",
+                height: "48px",
+                fontSize: "12px",
+                borderRadius: "50%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              UA
+            </div>
           </div>
         )}
       </StyledContainer>
