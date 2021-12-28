@@ -3,6 +3,8 @@ import SwiperCore, { Pagination, Lazy } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { wemanRoom, manRoom, childRoom } from "../../data/priceContainer";
 import StyledSelect from "../shared/styledSelect";
+import Heading from "../typography/heading";
+import Text from "../typography/text";
 
 SwiperCore.use([Pagination, Lazy]);
 
@@ -46,33 +48,58 @@ const Services = () => {
   console.log(newEl);
 
   return (
-    <div>
-      <div style={{ display: "flex", gap: "20px" }}>
-        <p
-          style={{
-            cursor: "pointer",
-          }}
+    <div
+      style={{
+        padding: "53px 25px",
+        backgroundColor: "#EFE8E1",
+      }}
+    >
+      <Heading
+        size="l"
+        letterSpacing="5"
+        transform="uppercase"
+        margin="0 0 36px 0"
+        weight="bold"
+        color="#1B4332"
+      >
+        Наши услуги и цены
+      </Heading>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          padding: "0 22px",
+          marginBottom: "47px",
+        }}
+      >
+        <Text
+          size="ss"
+          color="#1B4332"
+          transform="uppercase"
+          letterSpacing="3"
           onClick={() => {
             setCurrentTab(wemanRoom);
           }}
         >
           Женский зал
-        </p>
-        <p
+        </Text>
+        <Text
+          size="ss"
+          color="#1B4332"
+          transform="uppercase"
+          letterSpacing="3"
           onClick={() => {
             setCurrentTab(manRoom);
           }}
-          style={{
-            cursor: "pointer",
-          }}
         >
           Мужской зал
-        </p>
+        </Text>
       </div>
       <StyledSelect
         currentOption={currentSrvice}
         options={currentTab}
         setCurrentOption={setCurrentService}
+        marginBottom="30"
       />
       {currentSrvice?.subCategories && (
         <Swiper {...carouselSettings} freeMode>
@@ -81,42 +108,63 @@ const Services = () => {
 
             return (
               <SwiperSlide key={id}>
-                <p
+                <Text
+                  size="s"
+                  letterSpacing="2"
+                  color="#1B4332"
                   onClick={() => {
                     setCurrentPrice(item);
                   }}
                 >
                   {subCategorie}
-                </p>
+                </Text>
               </SwiperSlide>
             );
           })}
         </Swiper>
       )}
       {newEl.length && (
-        <Swiper {...carouselSettingsPrice}>
-          {newEl.map((item, index) => {
-            return (
-              <SwiperSlide key={index}>
-                {item.map(({ name, price, id }) => {
-                  return (
-                    <div key={id}>
-                      <p>{name}</p>
-                      <p>{price}</p>
-                    </div>
-                  );
-                })}
-              </SwiperSlide>
-            );
-          })}
-          <div
-            style={{
-              visibility:
-                !newEl.length || newEl.length === 1 ? "hidden" : "visible",
-            }}
-            className="swiper-pagination"
-          />
-        </Swiper>
+        <div
+          style={{
+            marginTop: "20px",
+          }}
+        >
+          <Swiper {...carouselSettingsPrice}>
+            {newEl.map((item, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  {item.map(({ name, price, id }) => {
+                    return (
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          backgroundColor: "#fff",
+                          padding: "0 20px",
+                        }}
+                        key={id}
+                      >
+                        <Text color="#1B4332" size="s">
+                          {name.slice(0, 1).toUpperCase() + name.slice(1)}
+                        </Text>
+                        <Text color="#1B4332" size="s">
+                          {price}
+                        </Text>
+                      </div>
+                    );
+                  })}
+                </SwiperSlide>
+              );
+            })}
+            <div
+              style={{
+                visibility:
+                  !newEl.length || newEl.length === 1 ? "hidden" : "visible",
+              }}
+              className="swiper-pagination"
+            />
+          </Swiper>
+        </div>
       )}
     </div>
   );

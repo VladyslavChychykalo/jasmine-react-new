@@ -21,7 +21,7 @@ const Team = () => {
   };
 
   return (
-    <div style={{ position: "relative", padding: "51px 25px" }}>
+    <div style={{ position: "relative", padding: "51px 25px 72px 25px" }}>
       {/* <GlobalStyle /> */}
       <Heading
         size="l"
