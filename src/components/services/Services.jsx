@@ -133,26 +133,31 @@ const Services = () => {
             {newEl.map((item, index) => {
               return (
                 <SwiperSlide key={index}>
-                  {item.map(({ name, price, id }) => {
-                    return (
-                      <div
-                        style={{
-                          display: "flex",
-                          justifyContent: "space-between",
-                          backgroundColor: "#fff",
-                          padding: "0 20px",
-                        }}
-                        key={id}
-                      >
-                        <Text color="#1B4332" size="s">
-                          {name.slice(0, 1).toUpperCase() + name.slice(1)}
-                        </Text>
-                        <Text color="#1B4332" size="s">
-                          {price}
-                        </Text>
-                      </div>
-                    );
-                  })}
+                  <div
+                    style={{
+                      backgroundColor: "#fff",
+                    }}
+                  >
+                    {item.map(({ name, price, id }) => {
+                      return (
+                        <div
+                          style={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            padding: "0 20px",
+                          }}
+                          key={id}
+                        >
+                          <Text color="#1B4332" size="s">
+                            {name.slice(0, 1).toUpperCase() + name.slice(1)}
+                          </Text>
+                          <Text color="#1B4332" size="s">
+                            {price}
+                          </Text>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </SwiperSlide>
               );
             })}

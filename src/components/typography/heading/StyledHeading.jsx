@@ -31,6 +31,7 @@ const StyledHeading = styled(Text)`
   letter-spacing: ${({ letterSpacing }) => letterSpacing + "px"};
   color: ${({ color }) => color};
   margin: ${({ margin }) => margin};
+  line-height: ${({ lineHeight }) => lineHeight + "px"};
   word-break: break-word;
 `;
 
