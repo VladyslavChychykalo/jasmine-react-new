@@ -109,7 +109,7 @@ const Contacts = () => {
           </a>
         </li>
       </ul>
-      {/* <div>
+      <div>
         <iframe
           title="Google Maps"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.027626170004!2d30.43088551554299!3d50.44058607947398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc199da3ea95%3A0x29e3b72d9d1dcd8!2sHarmatna%20St%2C%2045%2C%20Kyiv%2C%20Ukraine%2C%2002000!5e0!3m2!1sen!2s!4v1641816229761!5m2!1sen!2s"
@@ -122,7 +122,7 @@ const Contacts = () => {
           loading="lazy"
           tabIndex="0"
         />
-      </div> */}
+      </div>
     </div>
   );
 };
