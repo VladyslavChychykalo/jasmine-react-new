@@ -42,7 +42,11 @@ const AboutUs = () => {
         Место, с чистыми кистями, одноразовыми материалами и профессиональными
         руками.
       </Text>
-      <img style={{ marginTop: "16px" }} src={image} alt="About Us" />
+      <img
+        style={{ marginTop: "16px", width: "100%" }}
+        src={image}
+        alt="About Us"
+      />
     </div>
   );
 };

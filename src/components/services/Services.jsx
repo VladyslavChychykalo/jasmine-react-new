@@ -5,6 +5,7 @@ import { wemanRoom, manRoom, childRoom } from "../../data/priceContainer";
 import StyledSelect from "../shared/styledSelect";
 import Heading from "../typography/heading";
 import Text from "../typography/text";
+import { StyledTD, StyledTD2 } from "./StyledServices";
 
 SwiperCore.use([Pagination, Lazy]);
 
@@ -14,7 +15,7 @@ const Services = () => {
   const [currentPrice, setCurrentPrice] = useState(null);
 
   useEffect(() => {
-    setCurrentService(currentTab[0]);
+    setCurrentService(currentTab.attrs[0]);
   }, [currentTab]);
 
   useEffect(() => {
@@ -44,8 +45,6 @@ const Services = () => {
     const el = currentPrice?.services.attributes.slice(i * 7, i * 7 + 7);
     newEl.push(el);
   }
-
-  console.log(newEl);
 
   return (
     <div
@@ -97,7 +96,7 @@ const Services = () => {
       </div>
       <StyledSelect
         currentOption={currentSrvice}
-        options={currentTab}
+        options={currentTab.attrs}
         setCurrentOption={setCurrentService}
         marginBottom="30"
       />
@@ -127,44 +126,55 @@ const Services = () => {
         <div
           style={{
             marginTop: "20px",
+            backgroundColor: "#fff",
+            paddingBottom: "25px",
+            paddingTop: "20px",
           }}
         >
           <Swiper {...carouselSettingsPrice}>
             {newEl.map((item, index) => {
               return (
                 <SwiperSlide key={index}>
-                  <div
-                    style={{
-                      backgroundColor: "#fff",
-                    }}
-                  >
-                    {item.map(({ name, price, id }) => {
+                  <table style={{ width: "100%" }}>
+                    {item.map(({ name, price, label }) => {
                       return (
-                        <div
+                        <tr
                           style={{
-                            display: "flex",
-                            justifyContent: "space-between",
-                            padding: "0 20px",
+                            lineHeight: "20px",
                           }}
-                          key={id}
                         >
-                          <Text color="#1B4332" size="s">
-                            {name.slice(0, 1).toUpperCase() + name.slice(1)}
-                          </Text>
-                          <Text color="#1B4332" size="s">
-                            {price}
-                          </Text>
-                        </div>
+                          <StyledTD2>
+                            <Text
+                              color="#1B4332"
+                              size="s"
+                              weight={label ? "semibold" : "normal"}
+                            >
+                              {name.slice(0, 1).toUpperCase() + name.slice(1)}
+                            </Text>
+                          </StyledTD2>
+
+                          <StyledTD>
+                            <Text
+                              color="#1B4332"
+                              size="s"
+                              weight={label ? "semibold" : "normal"}
+                            >
+                              {price}
+                            </Text>
+                          </StyledTD>
+                        </tr>
                       );
                     })}
-                  </div>
+                  </table>
                 </SwiperSlide>
               );
             })}
+            {/* {newEl.length !== 1 && <div className="swiper-pagination" />} */}
             <div
               style={{
                 visibility:
                   !newEl.length || newEl.length === 1 ? "hidden" : "visible",
+                marginTop: (!newEl.length || newEl.length === 1) && "0px",
               }}
               className="swiper-pagination"
             />

@@ -14,7 +14,8 @@ const textSizes = {
 const textWeights = {
   normal: 400,
   light: 300,
-  bold: 700,
+  semibold: 600,
+  bold: 800,
 };
 
 const Text = (props) => {

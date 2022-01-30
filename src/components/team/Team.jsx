@@ -44,7 +44,23 @@ const Team = () => {
           ({ src, alt, id, name, profession, experience }) => {
             return (
               <SwiperSlide key={`mobile_thumb${id}`}>
-                <img src={src} alt={alt} />
+                <div
+                  style={{
+                    position: "relative",
+                    paddingBottom: "calc(1.25 * 100%)",
+                  }}
+                >
+                  <img
+                    style={{
+                      position: "absolute",
+                      width: "100%",
+                      height: "100%",
+                    }}
+                    src={src}
+                    alt={alt}
+                  />
+                </div>
+
                 <div
                   style={{
                     marginTop: "26px",
