@@ -5,7 +5,9 @@ import { wemanRoom, manRoom, childRoom } from "../../data/priceContainer";
 import StyledSelect from "../shared/styledSelect";
 import Heading from "../typography/heading";
 import Text from "../typography/text";
+import { StripIcon, UnderlineIcon } from "../../icons";
 import { StyledTD, StyledTD2 } from "./StyledServices";
+import styles from "./Test.module.scss";
 
 SwiperCore.use([Pagination, Lazy]);
 
@@ -22,11 +24,10 @@ const Services = () => {
     setCurrentPrice(currentSrvice?.subCategories[0]);
   }, [currentSrvice]);
 
-  console.log(currentPrice);
-
   const carouselSettings = {
     spaceBetween: 20,
-    slidesPerView: 1.5,
+    // slidesPerView: 1.5,
+    slidesPerView: "auto",
   };
 
   const carouselSettingsPrice = {
@@ -48,6 +49,7 @@ const Services = () => {
 
   return (
     <div
+      id="price"
       style={{
         padding: "53px 25px",
         backgroundColor: "#EFE8E1",
@@ -61,7 +63,7 @@ const Services = () => {
         weight="bold"
         color="#1B4332"
       >
-        Наши услуги и цены
+        НАШІ ПОСЛУГИ І ЦІНИ
       </Heading>
       <div
         style={{
@@ -69,30 +71,94 @@ const Services = () => {
           justifyContent: "space-between",
           padding: "0 22px",
           marginBottom: "47px",
+          flexWrap: "wrap",
+          rowGap: "30px",
         }}
       >
-        <Text
-          size="ss"
-          color="#1B4332"
-          transform="uppercase"
-          letterSpacing="3"
-          onClick={() => {
-            setCurrentTab(wemanRoom);
+        <div
+          style={{
+            position: "relative",
           }}
         >
-          Женский зал
-        </Text>
-        <Text
-          size="ss"
-          color="#1B4332"
-          transform="uppercase"
-          letterSpacing="3"
-          onClick={() => {
-            setCurrentTab(manRoom);
+          <Text
+            size="ss"
+            color="#1B4332"
+            transform="uppercase"
+            letterSpacing="3"
+            onClick={() => {
+              setCurrentTab(wemanRoom);
+            }}
+          >
+            Жіночий зал
+          </Text>
+          {currentTab.label === "Жіночий зал" && (
+            <UnderlineIcon
+              style={{
+                position: "absolute",
+                left: "50%",
+                transform: "translateX(-50%)",
+                top: "20px",
+              }}
+            />
+          )}
+        </div>
+
+        <div
+          style={{
+            position: "relative",
           }}
         >
-          Мужской зал
-        </Text>
+          <Text
+            size="ss"
+            color="#1B4332"
+            transform="uppercase"
+            letterSpacing="3"
+            onClick={() => {
+              setCurrentTab(manRoom);
+            }}
+          >
+            Чоловічий зал
+          </Text>
+          {currentTab.label === "Чоловічий зал" && (
+            <UnderlineIcon
+              style={{
+                position: "absolute",
+                left: "50%",
+                transform: "translateX(-50%)",
+                top: "20px",
+              }}
+            />
+          )}
+        </div>
+
+        <div
+          style={{
+            position: "relative",
+            margin: "0 auto",
+          }}
+        >
+          <Text
+            size="ss"
+            color="#1B4332"
+            transform="uppercase"
+            letterSpacing="3"
+            onClick={() => {
+              setCurrentTab(childRoom);
+            }}
+          >
+            Дитячий зал (до 12 років)
+          </Text>
+          {currentTab.label === "Дитячий зал (до 12 років)" && (
+            <UnderlineIcon
+              style={{
+                position: "absolute",
+                left: "50%",
+                transform: "translateX(-50%)",
+                top: "20px",
+              }}
+            />
+          )}
+        </div>
       </div>
       <StyledSelect
         currentOption={currentSrvice}
@@ -100,28 +166,42 @@ const Services = () => {
         setCurrentOption={setCurrentService}
         marginBottom="30"
       />
-      {currentSrvice?.subCategories && (
-        <Swiper {...carouselSettings} freeMode>
-          {currentSrvice.subCategories.map((item) => {
-            const { id, subCategorie } = item;
+      <div className={styles.wrapper}>
+        {!!currentSrvice?.subCategories.filter((el) => el.subCategorie !== "")
+          .length && (
+          <Swiper {...carouselSettings} freeMode>
+            {currentSrvice.subCategories.map((item) => {
+              const { id, subCategorie } = item;
 
-            return (
-              <SwiperSlide key={id}>
-                <Text
-                  size="s"
-                  letterSpacing="2"
-                  color="#1B4332"
-                  onClick={() => {
-                    setCurrentPrice(item);
-                  }}
-                >
-                  {subCategorie}
-                </Text>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      )}
+              return (
+                <SwiperSlide key={id}>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      width: "max-content",
+                    }}
+                  >
+                    <StripIcon className={styles.stripIconStyles} />
+                    <Text
+                      size="s"
+                      letterSpacing="2"
+                      color="#1B4332"
+                      onClick={() => {
+                        setCurrentPrice(item);
+                      }}
+                      whiteSpace="nowrap"
+                    >
+                      {subCategorie}
+                    </Text>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        )}
+      </div>
+
       {newEl.length && (
         <div
           style={{

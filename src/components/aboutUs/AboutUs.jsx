@@ -5,7 +5,7 @@ import image from "../../assets/images/aboutUs/aboutUs1.png";
 
 const AboutUs = () => {
   return (
-    <div style={{ marginTop: "75px", padding: "0px 25px" }}>
+    <div id="main" style={{ padding: "75px 25px 0px 25px" }}>
       <Heading
         transform="uppercase"
         size="l"
@@ -14,7 +14,7 @@ const AboutUs = () => {
         color="#1B4332"
         weight="bold"
       >
-        О нас
+        Про нас
       </Heading>
       <Text
         margin="23px 0 0 0"
@@ -22,7 +22,7 @@ const AboutUs = () => {
         letterSpacing="2"
         lineHeight="20"
       >
-        Уже как 10 лет мы в нашем салоне нашли формулу красоты.
+        Вже як 10 років ми знайшли в нашому салоні формулу краси.
       </Text>
       <Text
         margin="10px 0 0 0"
@@ -30,8 +30,8 @@ const AboutUs = () => {
         color="#1B4332"
         lineHeight="20"
       >
-        ЖАСМИН - твоё спасение перед важной встречей, долгожданным свиданием или
-        насыщенным уик-эндом.
+        ЖАСМІН - твій порятунок перед важливою зустріччю, довгоочікуваним
+        побаченням або насиченим вікендом.
       </Text>
       <Text
         margin="14px 0 0 0"
@@ -39,7 +39,7 @@ const AboutUs = () => {
         color="#1B4332"
         lineHeight="20"
       >
-        Место, с чистыми кистями, одноразовыми материалами и профессиональными
+        Місце, з чистими кистями, одноразовими матеріалами та професійними
         руками.
       </Text>
       <img

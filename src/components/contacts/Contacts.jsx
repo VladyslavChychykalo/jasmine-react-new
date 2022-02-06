@@ -14,6 +14,7 @@ import {
 const Contacts = () => {
   return (
     <div
+      id="contacts"
       style={{
         backgroundColor: "#EFE8E1",
         padding: "52px 25px",
@@ -28,7 +29,7 @@ const Contacts = () => {
         color="#1B4332"
         weight="bold"
       >
-        Наши контакты
+        Наші контакти
       </Heading>
       <ul
         style={{
@@ -52,7 +53,7 @@ const Contacts = () => {
             size="m"
             color="#1B4332"
           >
-            Соломенский район, ул. Гарматная 45
+            Солом'янський район, вул. Гарматна 45
           </Text>
         </li>
         <li
@@ -70,9 +71,25 @@ const Contacts = () => {
             size="m"
             color="#1B4332"
           >
-            (093) 739-00-44
+            <a
+              style={{
+                textDecoration: "none",
+                color: "#1B4332",
+              }}
+              href="tel:+380937390044"
+            >
+              (093) 739-00-44
+            </a>
             <br />
-            (096) 811-84-56
+            <a
+              style={{
+                textDecoration: "none",
+                color: "#1B4332",
+              }}
+              href="tel:+380968118456"
+            >
+              (096) 811-84-56
+            </a>
           </Text>
         </li>
         <li
@@ -89,22 +106,22 @@ const Contacts = () => {
       </ul>
       <ul style={{ listStyle: "none", display: "flex", gap: "20px" }}>
         <li>
-          <a href="">
+          <a href="https://www.instagram.com/salonejasmine/?igshid=bmqpq878ep0q">
             <InstagramIcon width="32" height="32" />
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="https://t.me/salonejasmine">
             <TelegramIcon />
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="viber://chat?number=%2B380968118456">
             <ViberIcon />
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="https://www.facebook.com/salonejasminekiev/">
             <FacebookIcon />
           </a>
         </li>

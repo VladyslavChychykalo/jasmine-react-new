@@ -21,7 +21,10 @@ const Team = () => {
   };
 
   return (
-    <div style={{ position: "relative", padding: "51px 25px 72px 25px" }}>
+    <div
+      id="team"
+      style={{ position: "relative", padding: "51px 25px 72px 25px" }}
+    >
       {/* <GlobalStyle /> */}
       <Heading
         size="l"
@@ -31,7 +34,7 @@ const Team = () => {
         weight="bold"
         color="#1B4332"
       >
-        Мастера
+        Майстера
       </Heading>
       <StyledSelect
         currentOption={currentOption}
@@ -55,6 +58,7 @@ const Team = () => {
                       position: "absolute",
                       width: "100%",
                       height: "100%",
+                      objectFit: "cover",
                     }}
                     src={src}
                     alt={alt}

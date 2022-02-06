@@ -8,3 +8,6 @@ export { default as ClockIcon } from "./ClockIcon";
 export { default as FacebookIcon } from "./FacebookIcon";
 export { default as TelegramIcon } from "./TelegramIcon";
 export { default as ViberIcon } from "./ViberIcon";
+export { default as StripIcon } from "./StripIcon";
+export { default as LongStripIcon } from "./LongStripIcon";
+export { default as UnderlineIcon } from "./UnderlineIcon";

@@ -20,6 +20,7 @@ const Gallery = () => {
 
   return (
     <div
+      id="gallery"
       style={{
         position: "relative",
         backgroundColor: "#EFE8E1",
@@ -34,7 +35,7 @@ const Gallery = () => {
         color="#1B4332"
         transform="uppercase"
       >
-        Наши работы
+        Наші роботи
       </Heading>
       <div
         style={{
@@ -45,10 +46,17 @@ const Gallery = () => {
           marginBottom: "18px",
         }}
       >
-        <Text color="#1B4332" letterSpacing="3" lineHeight="20">
-          Больше работ смотрите в нашем INSTAGRAM
+        <Text
+          margin="0px 15px 0px 0px"
+          color="#1B4332"
+          letterSpacing="3"
+          lineHeight="20"
+        >
+          Більше робіт дивіться у нашому INSTAGRAM
         </Text>
-        <InstagramIcon />
+        <a href="https://www.instagram.com/salonejasmine/?igshid=bmqpq878ep0q">
+          <InstagramIcon width="36" height="36" />
+        </a>
       </div>
       <Swiper {...carouselSettings}>
         {galleryImages.map(({ src, alt, id }) => {

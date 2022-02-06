@@ -35,6 +35,7 @@ const StyledText = styled(Text)`
   margin: ${({ margin }) => margin};
   line-height: ${({ lineHeight }) => lineHeight + "px"};
   word-break: break-word;
+  white-space: ${({ whiteSpace }) => whiteSpace};
 `;
 
 StyledText.propTypes = {
@@ -47,6 +48,7 @@ StyledText.propTypes = {
   letterSpacing: PropTypes.string || PropTypes.number,
   color: PropTypes.string,
   margin: PropTypes.string,
+  whiteSpace: PropTypes.string,
 };
 
 StyledText.defaultProps = {
@@ -60,6 +62,7 @@ StyledText.defaultProps = {
   color: "",
   margin: "0",
   lineHeight: "inherit",
+  whiteSpace: "none",
 };
 
 export default StyledText;

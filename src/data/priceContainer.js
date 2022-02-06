@@ -1,15 +1,15 @@
 import { v4 as uuidv4 } from "uuid";
 
 export const wemanRoom = {
-  lebel: "Женский зал",
+  label: "Жіночий зал",
   attrs: [
     {
       id: uuidv4(),
-      selectName: "Парикмахерский зал",
+      selectName: "Перукарський зал",
       subCategories: [
         {
           id: uuidv4(),
-          subCategorie: "Услуги по покраске волос",
+          subCategorie: "Послуги з фарбування волосся",
           // additionalInfo: {},
           services: {
             attributes: [
@@ -55,9 +55,14 @@ export const wemanRoom = {
         },
         {
           id: uuidv4(),
-          subCategorie: "Лечение и уход за волоссами",
+          subCategorie: "Лікування та догляд за волоссям",
           services: {
             attributes: [
+              {
+                name: "Довжина",
+                price: "1-2 / 3-5",
+                label: "special",
+              },
               {
                 name: "холодна терапія(rolland)",
                 price: "600-700 / 800-1000",
@@ -75,12 +80,53 @@ export const wemanRoom = {
         },
         {
           id: uuidv4(),
-          subCategorie: "Стрижка и укладка волос",
+          subCategorie: "Стрижки та укладки волосся",
           services: {
             attributes: [
               {
-                name: "мелірування волосся",
-                price: "",
+                name: "Довжина",
+                price: "1-2 / 3-5",
+                label: "special",
+              },
+              {
+                name: "стрижка класична (миття + сушка)",
+                price: "220-240 / 260-320",
+              },
+              {
+                name: "стрижка + укладка волосся",
+                price: "270-290 / 320-370",
+              },
+              {
+                name: "стрижка чубчика (оформлення)",
+                price: "50-100",
+              },
+              {
+                name: "стрижка кінчиків (залежить від густоти волосся)",
+                price: "150 / 200",
+              },
+              {
+                name: "полірування волосся",
+                price: "350-550",
+              },
+              {
+                name: "миття + укладка волосся",
+                price: "200 / 220-300",
+              },
+              {
+                name: "накрутка волосся на утюжок ( на плойку +50 грн)",
+                price: "300 / 350-550",
+              },
+              {
+                name: "зачіска вечірня (весільна +200 грн)",
+                price: "500 / 600-800",
+              },
+              {
+                name: "афрокудрі",
+                price: "від 600",
+              },
+              {
+                name: "плетіння кіс (одна коса)",
+                price: "від 100",
               },
             ],
           },
@@ -637,79 +683,160 @@ export const wemanRoom = {
   ],
 };
 
-export const manRoom = [
-  {
-    id: uuidv4(),
-    selectName: "Парикмахерский зал",
-    subCategories: [{ id: uuidv4(), subCategorie: "Стрижка", services: [] }],
-  },
-  {
-    id: uuidv4(),
-    selectName: "Зал ногтевой эстетики",
-    subCategories: [
-      {
-        id: uuidv4(),
-        subCategorie: "Маникюр",
-        services: {
-          attributes: [
-            {
-              name: "мелірування волосся",
-              price: "",
-            },
-          ],
+export const manRoom = {
+  label: "Чоловічий зал",
+  attrs: [
+    {
+      id: uuidv4(),
+      selectName: "Перукарський зал",
+      subCategories: [
+        {
+          id: uuidv4(),
+          subCategorie: "",
+          services: {
+            attributes: [
+              {
+                name: "стрижка класична",
+                price: "200",
+              },
+              {
+                name: "стрижка модельна",
+                price: "230",
+              },
+              {
+                name: "стрижка під насадку",
+                price: "100 / 180",
+              },
+              {
+                name: "миття + укладка волосся",
+                price: "100",
+              },
+              {
+                name: "гоління всієї голови",
+                price: "200",
+              },
+              {
+                name: "гоління (окантовка)",
+                price: "70",
+              },
+              {
+                name: "камуфлювання сивини",
+                price: "200",
+              },
+              {
+                name: "стрижка підліткова (12-16 років)",
+                price: "180",
+              },
+              {
+                name: "оформлення бороди",
+                price: "100-200",
+              },
+              {
+                name: "миття волосся лікувальним шампунем",
+                price: "50",
+              },
+              {
+                name: "масаж голови",
+                price: "100",
+              },
+              {
+                name: "стрижка вусів",
+                price: "40",
+              },
+            ],
+          },
         },
-      },
-      {
-        id: uuidv4(),
-        subCategorie: "Педикюр",
-        services: {
-          attributes: [
-            {
-              name: "мелірування волосся",
-              price: "",
-            },
-          ],
+      ],
+    },
+    {
+      id: uuidv4(),
+      selectName: "Зал нігтьової естетики",
+      subCategories: [
+        {
+          id: uuidv4(),
+          subCategorie: "Манікюр",
+          services: {
+            attributes: [
+              {
+                name: "обрізний/комбінований/апаратний",
+                price: "240/270/300",
+              },
+              {
+                name: "покриття лаком",
+                price: "70",
+              },
+              {
+                name: "дизайн",
+                price: "від 100",
+              },
+            ],
+          },
         },
-      },
-    ],
-  },
-  {
-    id: uuidv4(),
-    selectName: "Массажи",
-    subCategories: [
-      {
-        id: uuidv4(),
-        subCategorie: "",
-        services: {
-          attributes: [
-            {
-              name: "мелірування волосся",
-              price: "",
-            },
-          ],
+        {
+          id: uuidv4(),
+          subCategorie: "Педикюр",
+          services: {
+            attributes: [
+              {
+                name: "обрізний/комбінований",
+                price: "420/450",
+              },
+              {
+                name: "кислотний",
+                price: "480",
+              },
+              {
+                name: "масаж рук/ніг",
+                price: "130/160",
+              },
+            ],
+          },
         },
-      },
-    ],
-  },
-];
+      ],
+    },
+  ],
+};
 
-export const childRoom = [
-  {
-    id: uuidv4(),
-    selectName: "Парикмахерский зал",
-    subCategories: [
-      {
-        id: uuidv4(),
-        subCategorie: "Стрижка",
-        services: {
-          attributes: [
-            {
-              name: "мелірування волосся",
-              price: "",
-            },
-          ],
+export const childRoom = {
+  label: "Дитячий зал (до 12 років)",
+  attrs: [
+    {
+      id: uuidv4(),
+      selectName: "Перукарський зал",
+      subCategories: [
+        {
+          id: uuidv4(),
+          subCategorie: "",
+          services: {
+            attributes: [
+              {
+                name: "стрижка класична/модельна (без миття голови)",
+                price: "150",
+              },
+              {
+                name: "укладка",
+                price: "200",
+              },
+              {
+                name: "накрутка волосся на утюжок ( на плойку +50 грн)",
+                price: "200-350",
+              },
+              {
+                name: "зачіска",
+                price: "300-500",
+              },
+              {
+                name: "плетіння кіс (одна коса)",
+                price: "від 50",
+              },
+              {
+                name: "миття волосся",
+                price: "50",
+              },
+            ],
+          },
         },
-      },
-    ],
-  },
-];
+      ],
+    },
+  ],
+};

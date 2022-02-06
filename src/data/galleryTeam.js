@@ -13,14 +13,14 @@ import OlyaHairPhoto from "../assets/images/team/team9.jpg";
 const teamContainer = [
   {
     id: uuidv4(),
-    selectName: "Парикмахеры",
+    selectName: "Перукарі",
     team: [
       {
         id: uuidv4(),
         src: RitaHairPhoto,
         experience: 5,
         name: "Рита",
-        profession: "Мастер парикмахерского искусства",
+        profession: "Майстер перукарського мистецтва",
         alt: "RitaHair",
       },
       {
@@ -28,7 +28,7 @@ const teamContainer = [
         src: KatyaHairPhoto,
         experience: 4,
         name: "Катя",
-        profession: "Мастер парикмахерского искусства",
+        profession: "Майстер перукарського мистецтва",
         alt: "KatyaHair",
       },
       {
@@ -36,7 +36,7 @@ const teamContainer = [
         src: OlyaHairPhoto,
         experience: 12,
         name: "Оля",
-        profession: "Мастер парикмахерского искусства",
+        profession: "Майстер перукарського мистецтва",
         alt: "OlyaHair",
       },
       {
@@ -44,21 +44,21 @@ const teamContainer = [
         src: MashaHairPhoto,
         experience: 9,
         name: "Маша",
-        profession: "Мастер парикмахерского искусства",
+        profession: "Майстер перукарського мистецтва",
         alt: "MashaHair",
       },
     ],
   },
   {
     id: uuidv4(),
-    selectName: "Ногтевой сервис",
+    selectName: "Нігтьовий сервіс",
     team: [
       {
         id: uuidv4(),
         src: AlenaNailsPhoto,
         experience: 9,
         name: "Алена",
-        profession: "Мастер ногтевого сервиса и депиляции (воском)",
+        profession: "Майстер нігтьового сервісу та депіляції (воском)",
         alt: "AlenaNails",
       },
       {
@@ -66,7 +66,7 @@ const teamContainer = [
         src: NatashaNailsPhoto,
         experience: 10,
         name: "Наташа",
-        profession: "Мастер ногтевого сервиса",
+        profession: "Майстер нігтьового сервісу",
         alt: "NatashaNails",
       },
       {
@@ -74,35 +74,35 @@ const teamContainer = [
         src: MarinaNailsPhoto,
         experience: 15,
         name: "Марина",
-        profession: "Мастер ногтевого сервиса (+наращивание ногтей)",
+        profession: "Майстер нігтьового сервісу (+ нарощування нігтів)",
         alt: "MarinaNails",
       },
     ],
   },
   {
     id: uuidv4(),
-    selectName: "Массажисты",
+    selectName: "Масажисти",
     team: [
       {
         id: uuidv4(),
         src: SergeyMassagePhoto,
         experience: 5,
         name: "Сергей",
-        profession: "Массажист",
+        profession: "Масажист",
         alt: "SergeyMassage",
       },
     ],
   },
   {
     id: uuidv4(),
-    selectName: "Косметология",
+    selectName: "Косметологія",
     team: [
       {
         id: uuidv4(),
         src: NatashaCosmetologyPhoto,
         experience: 8,
         name: "Наташа",
-        profession: "Косметолог и мастер по шугарингу",
+        profession: "Косметолог та майстер з шугарингу",
         alt: "NatashaCosmetolog",
       },
     ],

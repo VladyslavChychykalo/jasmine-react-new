@@ -5,13 +5,46 @@ import {
   StyledNav,
   GlobalStyle,
 } from "./StyledMobileMenu";
-import { MenuIcon, CrossIcon } from "../../icons";
+import { MenuIcon, CrossIcon, LongStripIcon } from "../../icons";
 import Heading from "../typography/heading";
 import Text from "../typography/text";
 
 const MobileMenu = () => {
   const [isMenu, setMenuStatus] = useState(false);
   const IconMenu = isMenu ? CrossIcon : MenuIcon;
+
+  const navigationOptions = [
+    {
+      id: 1,
+      title: "Головна",
+      linkPage: "#main",
+    },
+    {
+      id: 2,
+      title: "Галерея",
+      linkPage: "#gallery",
+    },
+    {
+      id: 3,
+      title: "Команда",
+      linkPage: "#team",
+    },
+    {
+      id: 4,
+      title: "Ціни",
+      linkPage: "#price",
+    },
+    {
+      id: 5,
+      title: "Сертифікати",
+      linkPage: "#certificates",
+    },
+    {
+      id: 6,
+      title: "Контакти",
+      linkPage: "#contacts",
+    },
+  ];
 
   return (
     <>
@@ -26,9 +59,23 @@ const MobileMenu = () => {
             height: "25px",
           }}
         >
-          <Heading size="l" as="h4" letterSpacing="3" color="#fff">
-            Жасмин
-          </Heading>
+          <div
+            style={{
+              position: "relative",
+            }}
+          >
+            <Heading size="l" as="h4" letterSpacing="3" color="#fff">
+              Жасмін
+            </Heading>
+            <LongStripIcon
+              style={{
+                position: "absolute",
+                bottom: "3px",
+                right: "-25px",
+              }}
+            />
+          </div>
+
           <IconMenu
             onClick={() => {
               window.scrollTo({ top: 0, behavior: "smooth" });
@@ -39,7 +86,7 @@ const MobileMenu = () => {
         {!isMenu ? (
           <div style={{ marginTop: "110px" }}>
             <Text letterSpacing="4" textWeights="light" size="xl" color="#fff">
-              Красота в стиле
+              Краса у стилі
             </Text>
             <Heading
               letterSpacing="17"
@@ -48,8 +95,9 @@ const MobileMenu = () => {
               color="#fff"
               transform="uppercase"
               margin="18px 0 0 0"
+              whiteSpace="nowrap"
             >
-              Жасмин
+              Жасмін
             </Heading>
             <Text
               letterSpacing="2.9"
@@ -58,8 +106,8 @@ const MobileMenu = () => {
               textWeights="normal"
               color="#fff"
             >
-              Все види косметологических услуг, маникюр и педикюр, окрашивание
-              волос, парикмахерские услуги.
+              Усі види косметологічних послуг, манікюр та педикюр, фарбування
+              волосся, перукарські послуги.
             </Text>
           </div>
         ) : (
@@ -84,20 +132,36 @@ const MobileMenu = () => {
                 width: "fit-content",
                 alignItems: "center",
                 marginTop: "72px",
-                gap: "38px",
+                gap: "32px",
                 letterSpacing: "4px",
               }}
             >
-              <a style={{ color: "#fff", fontSize: "18px" }}>Главная</a>
-              <a style={{ color: "#fff", fontSize: "18px" }}>Галерея</a>
-              <a style={{ color: "#fff", fontSize: "18px" }}>Прайс</a>
-              <a style={{ color: "#fff", fontSize: "18px" }}>Сертификаты</a>
-              <a style={{ color: "#fff", fontSize: "18px" }}>Контакты</a>
+              {navigationOptions.map(({ id, title, linkPage }) => {
+                return (
+                  <a
+                    style={{
+                      fontSize: "18px",
+                      fontWeight: "400",
+                      lineHeight: "22px",
+                      color: "#fff",
+                      fontFamily: "Lato",
+                      textDecoration: "none",
+                    }}
+                    onClick={() => {
+                      setMenuStatus(false);
+                    }}
+                    key={id}
+                    href={linkPage}
+                  >
+                    {title}
+                  </a>
+                );
+              })}
             </nav>
             <div
               style={{
                 marginRight: "auto",
-                marginTop: "92px",
+                marginTop: "32px",
                 marginLeft: "24px",
                 color: "#fff",
                 border: "1px solid #fff",
