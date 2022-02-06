@@ -144,7 +144,7 @@ const MobileMenu = () => {
                       fontWeight: "400",
                       lineHeight: "22px",
                       color: "#fff",
-                      fontFamily: "Lato",
+                      fontFamily: "Lato, sans-serif",
                       textDecoration: "none",
                     }}
                     onClick={() => {
