@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/jasmine-react-new/static/css/main.8f522a22.chunk.css",
-    "main.js": "/jasmine-react-new/static/js/main.9d94ffbc.chunk.js",
-    "main.js.map": "/jasmine-react-new/static/js/main.9d94ffbc.chunk.js.map",
+    "main.js": "/jasmine-react-new/static/js/main.0ceece93.chunk.js",
+    "main.js.map": "/jasmine-react-new/static/js/main.0ceece93.chunk.js.map",
     "runtime-main.js": "/jasmine-react-new/static/js/runtime-main.d9b14ef4.js",
     "runtime-main.js.map": "/jasmine-react-new/static/js/runtime-main.d9b14ef4.js.map",
     "static/css/2.53ddf717.chunk.css": "/jasmine-react-new/static/css/2.53ddf717.chunk.css",
@@ -20,6 +20,7 @@
     "static/media/gallery4.586a07a4.png": "/jasmine-react-new/static/media/gallery4.586a07a4.png",
     "static/media/gallery5.b42cd2e0.png": "/jasmine-react-new/static/media/gallery5.b42cd2e0.png",
     "static/media/team1.0abda7ca.jpg": "/jasmine-react-new/static/media/team1.0abda7ca.jpg",
+    "static/media/team10.2ebece8c.jpg": "/jasmine-react-new/static/media/team10.2ebece8c.jpg",
     "static/media/team2.d38cd4ec.jpg": "/jasmine-react-new/static/media/team2.d38cd4ec.jpg",
     "static/media/team3.b3fe4370.jpg": "/jasmine-react-new/static/media/team3.b3fe4370.jpg",
     "static/media/team4.9ef7cf8b.jpg": "/jasmine-react-new/static/media/team4.9ef7cf8b.jpg",
@@ -34,6 +35,6 @@
     "static/css/2.53ddf717.chunk.css",
     "static/js/2.f2d563ce.chunk.js",
     "static/css/main.8f522a22.chunk.css",
-    "static/js/main.9d94ffbc.chunk.js"
+    "static/js/main.0ceece93.chunk.js"
   ]
 }
