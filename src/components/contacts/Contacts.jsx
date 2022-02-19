@@ -99,14 +99,29 @@ const Contacts = () => {
           }}
         >
           <ClockIcon />
-          <Text margin="0 0 0 20px" letterSpacing="3" size="m" color="#1B4332">
-            Пн-Вс: 10:00-20:00
-          </Text>
+          <div>
+            <Text
+              margin="0 0 5px 20px"
+              letterSpacing="3"
+              size="m"
+              color="#1B4332"
+            >
+              Пн-Пт: 09:00-20:00
+            </Text>
+            <Text
+              margin="0 0 0 20px"
+              letterSpacing="3"
+              size="m"
+              color="#1B4332"
+            >
+              Сб-Нд: 10:00-20:00
+            </Text>
+          </div>
         </li>
       </ul>
       <ul style={{ listStyle: "none", display: "flex", gap: "20px" }}>
         <li>
-          <a href="https://www.instagram.com/salonejasmine/?igshid=bmqpq878ep0q">
+          <a href="https://www.instagram.com/salonejasmine_/?utm_medium=copy_link">
             <InstagramIcon width="32" height="32" />
           </a>
         </li>
@@ -116,7 +131,7 @@ const Contacts = () => {
           </a>
         </li>
         <li>
-          <a href="viber://chat?number=%2B380968118456">
+          <a href="viber://chat?number=%2B380937390044">
             <ViberIcon />
           </a>
         </li>

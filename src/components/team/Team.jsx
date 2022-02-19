@@ -34,7 +34,7 @@ const Team = () => {
         weight="bold"
         color="#1B4332"
       >
-        Майстера
+        Майстри
       </Heading>
       <StyledSelect
         currentOption={currentOption}
@@ -89,7 +89,8 @@ const Team = () => {
                     margin="5px 0 0 0"
                     size="ss"
                   >
-                    Опыт работы {experience} лет
+                    {/* Досвід роботи {experience} роки(ів) */}
+                    {experience}
                   </Text>
                 </div>
               </SwiperSlide>

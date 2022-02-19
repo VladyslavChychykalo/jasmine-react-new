@@ -347,7 +347,7 @@ export const wemanRoom = {
     },
     {
       id: uuidv4(),
-      selectName: "Депиляция",
+      selectName: "Депіляція",
       subCategories: [
         {
           id: uuidv4(),

@@ -54,7 +54,7 @@ const Gallery = () => {
         >
           Більше робіт дивіться у нашому INSTAGRAM
         </Text>
-        <a href="https://www.instagram.com/salonejasmine/?igshid=bmqpq878ep0q">
+        <a href="https://www.instagram.com/salonejasmine_/?utm_medium=copy_link">
           <InstagramIcon width="36" height="36" />
         </a>
       </div>

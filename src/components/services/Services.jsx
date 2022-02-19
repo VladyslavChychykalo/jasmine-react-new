@@ -63,7 +63,7 @@ const Services = () => {
         weight="bold"
         color="#1B4332"
       >
-        НАШІ ПОСЛУГИ І ЦІНИ
+        НАШІ ПОСЛУГИ ТА ЦІНИ
       </Heading>
       <div
         style={{

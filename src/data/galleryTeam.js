@@ -2,6 +2,7 @@ import { v4 as uuidv4 } from "uuid";
 
 import NatashaNailsPhoto from "../assets/images/team/team1.jpg";
 import SergeyMassagePhoto from "../assets/images/team/team2.jpg";
+import AndreyMassagePhoto from "../assets/images/team/team10.jpg";
 import MarinaNailsPhoto from "../assets/images/team/team3.jpg";
 import AlenaNailsPhoto from "../assets/images/team/team4.jpg";
 import MashaHairPhoto from "../assets/images/team/team5.jpg";
@@ -18,7 +19,7 @@ const teamContainer = [
       {
         id: uuidv4(),
         src: RitaHairPhoto,
-        experience: 5,
+        experience: "Досвід роботи 5 років",
         name: "Рита",
         profession: "Майстер перукарського мистецтва",
         alt: "RitaHair",
@@ -26,7 +27,7 @@ const teamContainer = [
       {
         id: uuidv4(),
         src: KatyaHairPhoto,
-        experience: 4,
+        experience: "Досвід роботи 4 роки",
         name: "Катя",
         profession: "Майстер перукарського мистецтва",
         alt: "KatyaHair",
@@ -34,7 +35,7 @@ const teamContainer = [
       {
         id: uuidv4(),
         src: OlyaHairPhoto,
-        experience: 12,
+        experience: "Досвід роботи 12 років",
         name: "Оля",
         profession: "Майстер перукарського мистецтва",
         alt: "OlyaHair",
@@ -42,8 +43,8 @@ const teamContainer = [
       {
         id: uuidv4(),
         src: MashaHairPhoto,
-        experience: 9,
-        name: "Маша",
+        experience: "Досвід роботи 9 років",
+        name: "Марія",
         profession: "Майстер перукарського мистецтва",
         alt: "MashaHair",
       },
@@ -56,23 +57,23 @@ const teamContainer = [
       {
         id: uuidv4(),
         src: AlenaNailsPhoto,
-        experience: 9,
-        name: "Алена",
+        experience: "Досвід роботи 9 років",
+        name: "Олена",
         profession: "Майстер нігтьового сервісу та депіляції (воском)",
         alt: "AlenaNails",
       },
       {
         id: uuidv4(),
         src: NatashaNailsPhoto,
-        experience: 10,
-        name: "Наташа",
+        experience: "Досвід роботи 10 років",
+        name: "Наталі",
         profession: "Майстер нігтьового сервісу",
         alt: "NatashaNails",
       },
       {
         id: uuidv4(),
         src: MarinaNailsPhoto,
-        experience: 15,
+        experience: "Досвід роботи 15 років",
         name: "Марина",
         profession: "Майстер нігтьового сервісу (+ нарощування нігтів)",
         alt: "MarinaNails",
@@ -86,10 +87,18 @@ const teamContainer = [
       {
         id: uuidv4(),
         src: SergeyMassagePhoto,
-        experience: 5,
-        name: "Сергей",
+        experience: "Досвід роботи 5 років",
+        name: "Сергій",
         profession: "Масажист",
         alt: "SergeyMassage",
+      },
+      {
+        id: uuidv4(),
+        src: AndreyMassagePhoto,
+        experience: "Досвід роботи 3 роки",
+        name: "Андрій",
+        profession: "Масажист",
+        alt: "AndreyMassage",
       },
     ],
   },
@@ -100,8 +109,8 @@ const teamContainer = [
       {
         id: uuidv4(),
         src: NatashaCosmetologyPhoto,
-        experience: 8,
-        name: "Наташа",
+        experience: "Досвід роботи 8 років",
+        name: "Наталі",
         profession: "Косметолог та майстер з шугарингу",
         alt: "NatashaCosmetolog",
       },

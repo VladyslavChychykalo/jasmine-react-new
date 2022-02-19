@@ -28,7 +28,7 @@ const Certificates = () => {
         weight="bold"
         lineHeight="24"
       >
-        Подарункові сертифікати
+        Подарунковий сертифікат
       </Heading>
       <Text
         margin="17px 0 0 0"
@@ -38,6 +38,7 @@ const Certificates = () => {
       >
         Подарунковий сертифікат салону краси Жасмін – це найкращий подарунок. Ви
         можете придбати сертифікат на будь-яку суму або вибрати необхідну
+        послугу.
       </Text>
       <Text
         margin="29px 0 0 0"
@@ -58,6 +59,15 @@ const Certificates = () => {
         та позитивні емоції.
       </Text>
 
+      <Text
+        margin="21px 0 0 0"
+        letterSpacing="2"
+        color="#1B4332"
+        lineHeight="20"
+        weight="semibold"
+      >
+        Термін дії сертифіката 3 місяці з дня покупки.
+      </Text>
       <div style={{ marginTop: "22px" }}>
         <Swiper {...carouselSettings}>
           {certificateImages.map(({ src, alt, id }) => {
